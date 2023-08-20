@@ -15,15 +15,16 @@ function isAnagram(str1, str2) {
   for (let letter of str1) {
     count[letter] = (count[letter] || 0) + 1;
   }
-
+  console.log("count", count);
   for (let item of str2) {
     if (!count[item]) {
       return false;
     }
     count[item] -= 1;
   }
+  console.log("count", count);
   return true;
 }
 
-const result = isAnagram("hello", "lldeo");
+const result = isAnagram("hello", "llheo");
 console.log("result", result);
